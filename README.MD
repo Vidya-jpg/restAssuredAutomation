@@ -1,0 +1,108 @@
+# Rest-Assured-Java-API-Automation
+Demo of Rest Assured Java API Automation
+API Automation Using Rest Assured & TestNG
+This project provides a template for automating REST API testing across multiple environments using TestNG and the Rest Assured library.
+
+Rest Assured Automation CI
+
+Prerequisites
+
+     Java
+     Maven
+     TestNG
+     IntelliJ Community edition
+     extent reporter
+     Rest Assured
+     CI/CD GitHUB actions
+     windows OS
+
+The URL for APIs are given below as provided by you, the python code, i ran that code locally....
+
+http://127.0.0.1:8000/
+
+Project structure
+
+.
+¦   .gitignore
+¦   LICENSE
+¦   pom.xml
+¦   README.md
+¦   
++---.github
+¦   +---workflows
+¦           rest-assured-java-ci.yml
+¦           
++---.idea
+¦       .gitignore
+¦       workspace.xml
+¦       
++---logs
+¦       log-2025-07-08-13-59-23.log
+¦       
++---reports
+¦   +---html-reports
+¦           test_execution_results_2025-07-08 13-59-23.html
+¦           
++---src
+¦   +---main
+¦   ¦   +---java
+¦   ¦   ¦
+¦   ¦   ¦  +---constants
+¦   ¦   ¦      ¦  commonConstant.java
+¦   ¦   ¦      ¦  reporterConstant.java 
+¦   ¦   ¦  +---models
+¦   ¦   ¦      ¦ Books.java
+¦   ¦   ¦      ¦ userAuth.java
+¦   ¦   ¦  +---service
+¦   ¦   ¦      ¦  AuthService.java
+¦   ¦   ¦      ¦  bookService.java
+¦   ¦   ¦      ¦  ExtentReportService.java 
+¦   ¦   ¦  +---utils
+¦   ¦   ¦      ¦  AccessTokenManager.java                
+¦   ¦   ¦      ¦  commonUtils.java                  
+¦   ¦   ¦      ¦  fileReader.java
+¦   ¦   ¦      ¦  RequestBuilder.java
+¦   ¦   ¦      ¦  TestListener.java 
+¦   ¦   ¦  +---resources
+¦   ¦           log4j2.xml
+¦   ¦           test-reporter.properties
+¦   ¦           
+¦   +---test
+¦       +---java
+¦       ¦   +---test
+¦       ¦       ¦   AuthTest.java
+¦       ¦       ¦   BaseTest.java
+¦       ¦       ¦   CreateBookingTest.java
+¦       ¦       ¦   DeleteBookingTest.java
+¦       ¦       ¦   GetAllBookingsTest.java
+¦       ¦       ¦   UpdateBookingTest.java
+¦       ¦       ¦ 
+¦       +---resources
+¦           ¦   config.properties
+¦                   
+
+How to run tests
+
+Using IntelliJ Community Edition
+
+     Go to Maven Profiles
+
+     Select qa, uat or prod Maven Profile as the environment
+
+     Select the test classes on the src/test/java/test folder
+
+     Right-click and click on Run
+
+How to check reports:-
+
+After running the mvn commands , you can see the reports under
+
+        1) reports/html-reports
+        
+        2) target/surefire-reports/emailable-report.html
+        
+        3) target/surefire-reports/index.html
+
+        4) target/surefire-reports/API Automation Demo Smoke Test Suite/Smoke Test.html
+            or
+           target/surefire-reports/API Automation Demo Regression Test Suite/Regression Test.html

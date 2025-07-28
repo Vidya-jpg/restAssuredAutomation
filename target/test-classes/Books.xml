@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="API Automation Demo Books Test Suite">
+    <test name="Regression Test">
+        <classes>
+            <class name="test.createBookTests" />
+            <class name="test.deleteBookTests" />
+            <class name="test.updateBookTests" />
+            <class name="test.getBookTests" />
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,6 @@
+test\deleteBookTests.class
+test\updateBookTests.class
+test\baseTest.class
+test\AuthTests.class
+test\createBookTests.class
+test\getBookTests.class

@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="API Automation Demo Smoke Test Suite">
+    <test name="Regression Test">
+        <groups>
+         <run>
+             <include name="smoke" />
+         </run>
+        </groups>
+        <classes>
+            <class name="test.AuthTests" />
+            <class name="test.createBookTests" />
+            <class name="test.getBookTests" />
+        </classes>
+    </test>
+</suite>
