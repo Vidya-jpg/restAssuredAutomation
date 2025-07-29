@@ -5,9 +5,9 @@ import models.Books;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import service.bookService;
+import service.booksService;
 
-public class deleteBookTests {
+public class DeleteBookTests {
     private static final Books b=new Books();
     String token;
     @BeforeClass(alwaysRun = true)
@@ -23,7 +23,7 @@ public class deleteBookTests {
     @Test(description = "Validate Deleting book",priority = 1)
     public void deleteBook()
     {
-        bookService bs=new bookService();
+        booksService bs=new booksService();
         Response r=bs.deleteBook(b.getId());
         Assert.assertEquals(r.jsonPath().get("message"),"Book deleted successfully");
     }
@@ -31,7 +31,7 @@ public class deleteBookTests {
     @Test(description = "Validate Deleting book Without Auth",priority = 2)
     public void deleteBookWithoutAuth()
     {
-        bookService bs=new bookService();
+        booksService bs=new booksService();
         Response r=bs.deleteBookWithoutAuth(b.getId());
         Assert.assertEquals(r.jsonPath().get("detail"),"Not authenticated");
     }

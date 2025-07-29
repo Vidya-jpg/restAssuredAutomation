@@ -5,9 +5,9 @@ import models.Books;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import service.bookService;
+import service.booksService;
 
-public class createBookTests {
+public class CreateBookTests {
     private static final Books b=new Books();
     String token;
     @BeforeClass(alwaysRun = true)
@@ -22,7 +22,7 @@ public class createBookTests {
     @Test(description = "Validate creating a new book with Auth",priority = 1,groups = {"smoke"})
     public void CreateBookAuthTest()
     {
-        bookService bs=new bookService();
+        booksService bs=new booksService();
         Response response=bs.createBookWithAuth(b);
         System.out.print(response.toString());
         Assert.assertEquals(response.jsonPath().get("name"),b.getName());
@@ -35,7 +35,7 @@ public class createBookTests {
     @Test(description = "Validate creating a new book without Auth",priority = 2)
     public void CreateBookUnauthTest()
     {
-        bookService bs=new bookService();
+        booksService bs=new booksService();
         Response response=bs.createBookWithoutAuth(b);
         System.out.print(response.toString());
         System.out.print(response.jsonPath().get().toString());
@@ -44,7 +44,7 @@ public class createBookTests {
     @Test(description = "Validate creating a new book without Auth",priority = 2)
     public void CreateBookWithoutPayloadTest()
     {
-        bookService bs=new bookService();
+        booksService bs=new booksService();
         Response response=bs.createBookWithoutPayload();
         System.out.print(response.toString());
         System.out.print(response.jsonPath().get().toString());

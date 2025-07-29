@@ -2,10 +2,10 @@
 <suite name="API Automation Demo Books Test Suite">
     <test name="Regression Test">
         <classes>
-            <class name="test.createBookTests" />
-            <class name="test.deleteBookTests" />
-            <class name="test.updateBookTests" />
-            <class name="test.getBookTests" />
+            <class name="test.CreateBookTests" />
+            <class name="test.DeleteBookTests" />
+            <class name="test.UpdateBookTests" />
+            <class name="test.GetBookTests" />
         </classes>
     </test>
 </suite>

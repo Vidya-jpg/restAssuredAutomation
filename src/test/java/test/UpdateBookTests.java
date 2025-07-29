@@ -8,7 +8,7 @@ import org.testng.annotations.*;
 
 import static org.hamcrest.Matchers.notNullValue;
 
-public class updateBookTests {
+public class UpdateBookTests {
     private static final Books b=new Books();
     String token;
     @BeforeClass
@@ -23,7 +23,7 @@ public class updateBookTests {
     @Test(description = "Validate updating book",priority = 1)
     public void updateBook()
     {
-        bookService bs=new bookService();
+        booksService bs=new booksService();
         b.setName("test");
         System.out.print(b.getId()+b.getName());
         Response response=bs.updateBook(b.getId(),b);
@@ -38,7 +38,7 @@ public class updateBookTests {
     @Test(description = "Validate updating book without authentication",priority = 2)
     public void updateBookWithoutAuth()
     {
-        bookService bs=new bookService();
+        booksService bs=new booksService();
         b.setName("test");
         System.out.print(b.getId()+b.getName());
         Response response=bs.updateBookWithoutAuth(b.getId(),b);
@@ -49,7 +49,7 @@ public class updateBookTests {
     @Test(description = "Validate updating book without bookid",priority = 2)
     public void updateBookWithoutBookid()
     {
-        bookService bs=new bookService();
+        booksService bs=new booksService();
         b.setName("test");
         System.out.print(b.getId()+b.getName());
         Response response=bs.updateBookWithoutID(b);
