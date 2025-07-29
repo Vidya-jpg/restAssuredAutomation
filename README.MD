@@ -8,10 +8,15 @@ Rest Assured Automation CI
 Tools & Framework Components
 
 Java (17): Core programming language for framework logic
+
 RestAssured: RESTful API automation and validation
+
 TestNG: Test execution and configuration management
+
 ExtentReports: Generation of interactive HTML test reports
+
 Maven: Project build, dependency, and lifecycle management
+
 GitHub Actions: CI/CD pipeline for automated testing and deployment
 
 Clone the repo in the required directory on your PC 
