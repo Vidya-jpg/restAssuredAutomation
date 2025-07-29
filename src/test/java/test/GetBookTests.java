@@ -5,11 +5,11 @@ import models.Books;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import service.bookService;
+import service.booksService;
 
 import java.util.List;
 
-public class getBookTests {
+public class GetBookTests {
     private static final Books b=new Books();
     @BeforeClass(alwaysRun = true)
     public void createBookingData()
@@ -23,7 +23,7 @@ public class getBookTests {
     @Test(description = "Validate getting book by Id",priority = 1,groups = {"smoke"})
     public void getBookByidAuth()
     {
-        bookService bs=new bookService();
+        booksService bs=new booksService();
         Response response=bs.getBookById(b.getId());
         System.out.print(response.jsonPath().get().toString());
         Assert.assertEquals(response.jsonPath().get("name"),b.getName());
@@ -36,7 +36,7 @@ public class getBookTests {
     @Test(description = "Validate getting book by Id Without Auth",priority = 2)
     public void getBookByidWithoutAuth()
     {
-        bookService bs=new bookService();
+        booksService bs=new booksService();
         Response response=bs.getBookByIdWithoutAuth(b.getId());
         System.out.print(response.jsonPath().get().toString());
         Assert.assertEquals(response.jsonPath().get("detail"),"Not authenticated");
@@ -44,7 +44,7 @@ public class getBookTests {
     @Test(description = "Validate getting all books",priority = 3)
     public void getAllBooks()
     {
-        bookService bs=new bookService();
+        booksService bs=new booksService();
         Response response=bs.getAllBooks();
         System.out.print(response.jsonPath().get().toString());
         List<String> names=response.jsonPath().getList("name");
