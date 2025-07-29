@@ -5,16 +5,25 @@ This project provides a template for automating REST API testing across multiple
 
 Rest Assured Automation CI
 
-Prerequisites
+Tools & Framework Components
+Java (17): Core programming language for framework logic
+RestAssured: RESTful API automation and validation
+TestNG: Test execution and configuration management
+ExtentReports: Generation of interactive HTML test reports
+Maven: Project build, dependency, and lifecycle management
+GitHub Actions: CI/CD pipeline for automated testing and deployment
 
-     Java
-     Maven
-     TestNG
-     IntelliJ Community edition
-     extent reporter
-     Rest Assured
-     CI/CD GitHUB actions
-     windows OS
+Clone the repo in the required directory on your PC if you want to run locally:
+Clone the repository: git clone https://github.com/Vidya-jpg/restAssuredAutomation.git
+Update config.properties with the correct base URL.
+Run the test suite: mvn clean test
+View the report: Open the generated HTML report at: test-output/ExtentReport.html
+
+How to Run the Tests
+Prerequisites
+Java 17+
+Maven 3.6+
+Git
 
 The URL for APIs are given below as provided by you, the python code, i ran that code locally....
 
