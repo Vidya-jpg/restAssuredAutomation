@@ -7,7 +7,7 @@ Rest Assured Automation CI
 
 Tools & Framework Components
 
-Java (17): Core programming language for framework logic
+Java (21): Core programming language for framework logic
 
 RestAssured: RESTful API automation and validation
 
